@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testingcanvaas</title>
+    <style>
+        #myCanvas{
+            border:1px #000 solid;
+            background-color: #f4f4f4;
+            width: 300px;
+            height: 300px;
+        }
+        #myCanvas1{
+            border:1px #000 solid;
+            background-color: #f4f4f4;
+            width: 300px;
+            height: 300px;
+        }
+        #myCanvas2{
+            border:1px #000 solid;
+            background-color: #f4f4f4;
+            width: 300px;
+            height: 300px;
+        }
+        #myCanvas3{
+            border:1px #000 solid;
+            background-color: #f4f4f4;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+    <canvas id="myCanvas"></canvas>
+        <script>
+            var c = document.getElementById('myCanvas');
+            var ctx = c.getContext('2d');
+            
+            //rectangle 
+            ctx.fillStyle='red';
+            ctx.fillRect(75,50,100,50)
+            /*
+            //Line
+            ctx.moveTo(0,0);
+            ctx.lineTo(250,150);
+            ctx.stroke();
+            */
+
+        </script>
+        <canvas id="myCanvas1"></canvas>
+        <script>
+            var c = document.getElementById('myCanvas1');
+            var ctx = c.getContext('2d');
+
+            //cicrle
+            ctx.beginPath();
+            ctx.arc(150,75,40,0,2*Math.PI);
+            ctx.fillStyle='orange';
+            ctx.fill();
+            ctx.lineWidth=4;
+            ctx.strokeStyle='red';
+            ctx.stroke();
+        </script>
+        <canvas id="myCanvas2"></canvas>
+    <script>
+        var c = document.getElementById('myCanvas2');
+        var ctx = c.getContext('2d');
+        /*
+        //Text
+        ctx.font='50px Arial';
+        ctx.strokeStyle='red';
+        ctx.strokeText('Hello world',20,75);
+        */
+
+        
+            
+            //Gradient
+            var Gradient=ctx.createLinearGradient(0,0,100,0);
+            Gradient.addColorStop(0,'blue');
+            Gradient.addColorStop(1,'white');
+            ctx.fillStyle=Gradient;
+            ctx.fillRect(10,10,150,150)
+        </script>
+       </pre>
+</body>
+</html>
